@@ -23,6 +23,10 @@ namespace WcfService
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetModelObject/{id}/")]
         HelloObject GetModelObject(string id);
+
+        [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        Double Add(double n1, double n2);
     }
 
 
